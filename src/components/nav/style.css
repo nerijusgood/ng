@@ -1,5 +1,6 @@
 /*@import '~style/helpers';*/
 
-nav {
-	background-color: red;
+.Nav ul {
+  list-style: none;
+  display: flex;
 }
