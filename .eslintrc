@@ -19,7 +19,7 @@
     "no-console": 0,
     "no-unused-vars": [0, { "varsIgnorePattern": "^h$" }],
     "no-cond-assign": 1,
-    "semi": 2,
+    "semi": 0,
     "camelcase": 0,
     "comma-style": 2,
     "comma-dangle": [2, "never"],

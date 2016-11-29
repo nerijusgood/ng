@@ -5,14 +5,14 @@ import { h, render } from 'preact';
 
 let root;
 function init() {
-	let App = require('./components/app').default;
+	let App = require('./app').default;
 	root = render(<App />, document.body, root);
 }
 
 init();
 
 if (module.hot) {
-	module.hot.accept('./components/app', () => requestAnimationFrame( () => {
+	module.hot.accept('./app', () => requestAnimationFrame( () => {
 		flushLogs();
 		init();
 	}) );

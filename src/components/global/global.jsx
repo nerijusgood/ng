@@ -3,8 +3,6 @@ import { Router } from 'preact-router';
 
 import Landing from './landing';
 
-
-
 export default class App extends Component {
   /** Gets fired when the route changes.
    *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
