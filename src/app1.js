@@ -3,7 +3,7 @@ import { Router } from 'preact-router'
 import style from './style/'
 
 import Landing from './containers/landing'
-import Home from './containers/home'
+import Home from './containers/home/home'
 import Profile from './containers/profile'
 
 export default class App extends Component {

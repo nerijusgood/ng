@@ -1,0 +1,5 @@
+@import '../../style/constants';
+
+.Home {
+  color: var(--colorPrimary);
+}
