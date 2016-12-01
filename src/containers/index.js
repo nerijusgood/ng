@@ -1,3 +1,3 @@
 export Home from './Home/Home'
-export Button from './Landing/Langin'
-export Context from './Profile/Profile'
+export Landing from './Landing/Landing'
+export Profile from './Profile/Profile'

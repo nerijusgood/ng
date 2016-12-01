@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import style from './style'
+import style from './Global.css'
 
 export default class Header extends Component {
   render() {

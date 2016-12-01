@@ -1,4 +1,4 @@
-@import '../../style/constants';
+@import '../../style/index.css';
 
 .Home {
   color: var(--colorPrimary);

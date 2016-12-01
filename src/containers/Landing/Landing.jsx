@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import Granim from 'granim'
-import style from './style'
+import style from './Landing.css'
 
 export default class Landing extends Component {
 

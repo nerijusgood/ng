@@ -1,10 +1,8 @@
 import { h, Component } from 'preact'
 import { Router } from 'preact-router'
-import style from './style/'
+import style from './style'
 
-import Landing from './containers/landing'
-import Home from './containers/home/home'
-import Profile from './containers/profile'
+import { Landing, Home, Profile } from './containers'
 
 export default class App extends Component {
   /** Gets fired when the route changes.

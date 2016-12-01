@@ -31,6 +31,7 @@ module.exports = {
     ],
     alias: {
       components: path.resolve(__dirname, "src/components"), // used for tests
+      containers: path.resolve(__dirname, "src/containers"),
       style: path.resolve(__dirname, "src/style"),
       'react': 'preact-compat',
       'react-dom': 'preact-compat'
@@ -56,6 +57,14 @@ module.exports = {
         exclude: /src\/components\//,
         loader: ExtractTextPlugin.extract('style?singleton', [
           `css?sourceMap=${CSS_MAPS}&modules&importLoaders=1&localIdentName=[local]${process.env.CSS_MODULES_IDENT || '_[hash:base64:5]'}`,
+          'postcss'
+        ].join('!'))
+      },
+      {
+        test: /\.css?$/,
+        include: /src\/components\//,
+        loader: ExtractTextPlugin.extract('style?singleton', [
+          `css?sourceMap=${CSS_MAPS}`,
           'postcss'
         ].join('!'))
       },
