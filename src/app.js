@@ -1,7 +1,10 @@
 import { h, Component } from 'preact'
 import { Router } from 'preact-router'
+import style from './style/'
 
 import Landing from './containers/landing'
+import Home from './containers/home'
+import Profile from './containers/profile'
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -15,8 +18,10 @@ export default class App extends Component {
   render() {
     return (
       <Router onChange={this.handleRoute}>
-        {/* <Home path="/" /> */}
         <Landing path="/" />
+
+        <Home path="/home" />
+        <Profile path="/profile" />
       </Router>
     )
   }

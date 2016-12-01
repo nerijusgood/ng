@@ -1,23 +1,21 @@
-import { h, Component } from 'preact';
-import { Link } from 'preact-router';
-// import style from './style';
-
-
-import Nav from '../nav';
+import { h, Component } from 'preact'
+import { Link } from 'preact-router'
+import style from './style'
 
 export default class Header extends Component {
-	render() {
-		return (
-			<header class={style.header}>
-				<h1>Preact Boilerplate</h1>
+  render() {
+    return (
+      <header class={style.Header}>
+        <h1>Logo</h1>
 
-        <Nav />
-				{/* <nav>
-					<Link href="/">Homer</Link>
-					<Link href="/profile">Profile</Link>
-					<Link href="/profile/john">Johne</Link>
-				</nav> */}
-			</header>
-		);
-	}
+        <nav className='Nav'>
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/profile">Profile</Link></li>
+            <li><Link href="/profile/john">Example</Link></li>
+          </ul>
+        </nav>
+      </header>
+    )
+  }
 }

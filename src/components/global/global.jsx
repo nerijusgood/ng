@@ -1,25 +1,12 @@
-import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import { h, Component } from 'preact'
+import style from './style'
 
-import Landing from './landing';
-
-export default class App extends Component {
-  /** Gets fired when the route changes.
-   *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-   *	@param {string} event.url	The newly routed URL
-   */
-  handleRoute = e => {
-    this.currentUrl = e.url;
-  };
-
+export default class Header extends Component {
   render() {
     return (
-      <div id="app">
-        <Router onChange={this.handleRoute}>
-          {/* <Home path="/" /> */}
-          <Landing path="/" />
-        </Router>
+      <div class={style.Global}>
+
       </div>
-    );
+    )
   }
 }
