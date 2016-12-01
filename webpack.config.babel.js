@@ -1,12 +1,16 @@
-import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import path from 'path';
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
 
-const ENV = process.env.NODE_ENV || 'development';
+import cssImport from 'postcss-import'
+import cssVars from 'postcss-css-variables'
+import cssNested from 'postcss-nested'
+import autoprefixer from 'autoprefixer'
 
-const CSS_MAPS = ENV!=='production';
+const ENV = process.env.NODE_ENV || 'development'
+
+const CSS_MAPS = ENV!=='production'
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -49,18 +53,10 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        include: /src\/components\//,
+        exclude: /src\/components\//,
         loader: ExtractTextPlugin.extract('style?singleton', [
           `css?sourceMap=${CSS_MAPS}&modules&importLoaders=1&localIdentName=[local]${process.env.CSS_MODULES_IDENT || '_[hash:base64:5]'}`,
           'postcss'
-        ].join('!'))
-      },
-      {
-        test: /\.css?$/,
-        exclude: /src\/components\//,
-        loader: ExtractTextPlugin.extract('style?singleton', [
-          `css?sourceMap=${CSS_MAPS}`,
-          `postcss`
         ].join('!'))
       },
       {
@@ -79,6 +75,9 @@ module.exports = {
   },
 
   postcss: () => [
+    cssImport,
+    cssVars,
+    cssNested,
     autoprefixer({ browsers: 'last 2 versions' })
   ],
 
@@ -128,4 +127,4 @@ module.exports = {
       // }
     }
   }
-};
+}

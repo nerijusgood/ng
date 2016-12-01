@@ -67,6 +67,9 @@
   },
   "dependencies": {
     "granim": "^1.0.6",
+    "postcss-css-variables": "^0.6.0",
+    "postcss-import": "^8.2.0",
+    "postcss-nested": "^1.0.0",
     "preact": "^6.0.0",
     "preact-compat": "^3.0.0",
     "preact-router": "^2.0.0",
