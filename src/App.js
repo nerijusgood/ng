@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import { Router } from 'preact-router'
-import style from './style'
+import style from './style/App'
 
 import { Landing, Home, Profile } from './containers'
 
@@ -16,9 +16,9 @@ export default class App extends Component {
   render() {
     return (
       <Router onChange={this.handleRoute}>
-        <Landing path="/" />
+        {/* <Landing path="/" /> */}
 
-        <Home path="/home" />
+        <Home path="/" />
         <Profile path="/profile" />
       </Router>
     )

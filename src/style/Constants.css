@@ -1,3 +1,6 @@
 :root {
-  --colorPrimary: red;
+  --colorWhite: #fff;
+  --colorBG: #f7f7f7;
+
+  --navbarHeight: 160px;
 }
