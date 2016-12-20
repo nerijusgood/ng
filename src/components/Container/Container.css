@@ -1,0 +1,6 @@
+@import '../../style/Constants.css';
+
+.Container {
+  width: 850px;
+  margin: 0 auto;
+}

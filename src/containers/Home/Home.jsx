@@ -1,15 +1,19 @@
 import { h, Component } from 'preact'
-import { Main, Navbar } from '../../components'
+import { Main, Navbar, Container } from '../../components'
 import style from './Home.css'
 
 export default class Home extends Component {
   render() {
     return (
       <div class='Home'>
-        <Navbar />
+        <Container>
+          <Navbar />
+        </Container>
 
         <Main>
-          card area
+          <Container>
+            card area
+          </Container>
         </Main>
       </div>
     )

@@ -4,5 +4,5 @@
   background-color: var(--colorWhite);
   height: calc(100vh - (var(--navbarHeight) + 20px));
   width: calc(100vw - 40px);
-  margin: var(--navbarHeight) auto 20px;
+  margin: 0 auto 20px;
 }

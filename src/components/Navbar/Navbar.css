@@ -1,14 +1,30 @@
 @import '../../style/Constants.css';
 
 .Navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .Navbar-nav {
-  width: 60%;
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+  li + li {
+    border-left: none;
+  }
+
+  a {
+    padding: 50px 10px;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+  }
 }

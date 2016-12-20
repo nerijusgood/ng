@@ -10,7 +10,8 @@
     "prebuild": "mkdirp build && ncp src/assets build/assets",
     "test": "npm run -s lint && npm run -s test:karma",
     "test:karma": "karma start test/karma.conf.js --single-run",
-    "lint": "eslint {src,test}"
+    "lint": "eslint {src,test}",
+    "validate-wp:dev": "webpack-validator webpack.config.babel.js --env.dev"
   },
   "keywords": [
     "preact",
@@ -73,7 +74,8 @@
     "preact": "^6.0.0",
     "preact-compat": "^3.0.0",
     "preact-router": "^2.0.0",
-    "proptypes": "^0.14.3"
+    "proptypes": "^0.14.3",
+    "webpack-validator": "^2.3.0"
   },
   "main": "webpack.config.babel.js",
   "directories": {
