@@ -1,8 +1,8 @@
 @import 'Constants.css';
 
 ::selection {
-  color: var(--colorWhite);
-  background: var(--colorRed);
+  color: $colorWhite;
+  background: $colorRed;
   text-shadow: none;
 }
 
@@ -29,8 +29,7 @@
 /* Elements
 -------------------------------------------------------------------------------- */
 html {
-  background-color: var(--colorBG);
-  /*background-image: linear-gradient(to top, rgba(209, 238, 236, .75), rgba(209, 238, 236, 1)), url('./images/pattern.png');*/
+  background-color: $colorBG;
   background-size: 100%, 100px auto;
   font-family: 'Freight Sans', sans-serif;
   min-height: 100%;
@@ -41,7 +40,6 @@ html {
 }
 
 body {
-  color: var(--colorPurple);
   font-size: 100%;
   line-height: calc(22 / 16);
   margin: 0;
@@ -83,6 +81,10 @@ p {
 
 /* Layout
 -------------------------------------------------------------------------------- */
+.u-flex {
+  display: flex;
+}
+
 .u-row {
   display: block;
 
@@ -91,7 +93,7 @@ p {
   }
 }
 
-.u-twoThirds {
+/*.u-twoThirds {
   width: 70% !important;
   width: calc(70% - 20px) !important;
   padding-right: 20px;
@@ -107,7 +109,7 @@ p {
   @media (--bpBelow) {
     width: 100% !important;
   }
-}
+}*/
 
 /* Typography
 -------------------------------------------------------------------------------- */
@@ -145,43 +147,4 @@ p {
 
 .Lead {
   padding-top: 30px;
-}
-
-/* App
--------------------------------------------------------------------------------- */
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.App-inner {
-  flex: 1;
-  max-width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-  width: 100%;
-}
-
-.App--fullWidth {
-  .App-inner {
-    flex: 1;
-    max-width: 945px;
-  }
-}
-
-/* Header
--------------------------------------------------------------------------------- */
-.App-header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-
-  @media (--bpAbove) {
-    margin-top: 30px;
-    padding-bottom: 0;
-  }
 }

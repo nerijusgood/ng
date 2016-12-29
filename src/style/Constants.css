@@ -1,10 +1,10 @@
-:root {
-  --colorWhite: #fff;
-  --colorBG: #f7f7f7;
+$colorWhite: #fff;
+$colorBG: #f7f7f7;
 
-  --colorGray: #333333;
-  --colorGreen: #9bcbc7;
-  --colorRed: #da5441;
+$colorGray: #333333;
+$colorGrayDark: #7c7c7c;
+$colorLightGray: #e2e2e2;
+$colorGreen: #9bcbc7;
+$colorRed: #da5441;
 
-  --navbarHeight: 160px;
-}
+$navbarHeight: 116px;

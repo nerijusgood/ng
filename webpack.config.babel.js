@@ -5,7 +5,10 @@ import path from 'path'
 
 import cssImport from 'postcss-import'
 import cssVars from 'postcss-css-variables'
+import cssHexa from 'postcss-color-hexa'
+import cssRgba from 'postcss-hexrgba'
 import cssNested from 'postcss-nested'
+import precss from 'precss'
 import autoprefixer from 'autoprefixer'
 
 const ENV = process.env.NODE_ENV || 'development'
@@ -84,9 +87,8 @@ module.exports = {
   },
 
   postcss: () => [
-    cssImport,
-    cssVars,
-    cssNested,
+    precss,
+    cssRgba,
     autoprefixer({ browsers: 'last 2 versions' })
   ],
 

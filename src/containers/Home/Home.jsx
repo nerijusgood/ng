@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import { Main, Navbar, Container } from '../../components'
+import { Main, Navbar, Container, Sub } from '../../components'
 import style from './Home.css'
 
 export default class Home extends Component {
@@ -12,7 +12,15 @@ export default class Home extends Component {
 
         <Main>
           <Container>
-            card area
+            <div class="u-flex">
+              <div>
+                <Sub>Intro</Sub>
+              </div>
+
+              <div>
+                <Sub>Featured</Sub>
+              </div>
+            </div>
           </Container>
         </Main>
       </div>

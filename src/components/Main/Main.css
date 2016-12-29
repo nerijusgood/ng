@@ -1,8 +1,10 @@
 @import '../../style/Constants.css';
 
 .Main {
-  background-color: var(--colorWhite);
-  height: calc(100vh - (var(--navbarHeight) + 20px));
+  box-sizing: border-box;
+  background-color: $colorWhite;
+  height: calc(100vh - ($navbarHeight + 20px));
   width: calc(100vw - 40px);
   margin: 0 auto 20px;
+  padding: 65px 0;
 }

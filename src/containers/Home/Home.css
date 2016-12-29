@@ -1,5 +1,5 @@
 @import '../../style/Constants.css';
 
 .Home {
-  color: var(--colorPrimary);
+  color: $colorPrimary;
 }
