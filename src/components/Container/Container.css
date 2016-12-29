@@ -1,6 +1,7 @@
 @import '../../style/Constants.css';
 
 .Container {
-  width: 850px;
+  width: 960px;
+  /*max-width: calc(100% - 40px);*/
   margin: 0 auto;
 }

@@ -6,6 +6,11 @@
   justify-content: space-between;
 }
 
+.Navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
 .Navbar-nav {
   ul {
     display: flex;
@@ -26,5 +31,10 @@
     width: 140px;
     text-align: center;
     text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--colorGray);
   }
 }
