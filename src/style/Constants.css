@@ -7,4 +7,15 @@ $colorLightGray: #e2e2e2;
 $colorGreen: #9bcbc7;
 $colorRed: #da5441;
 
+/* Heigths */
 $navbarHeight: 116px;
+
+/* Breakpoints */
+@custom-media --sm (width >= 400px);
+@custom-media --mds (width >= 600px);
+@custom-media --md (width >= 768px);
+@custom-media --lg (width >= 1024px);
+@custom-media --xl (width >= 1280px);
+
+/*@custom-media --md (width >= 20em) and (width <= 50em);*/
+/*@custom-media --bar (height >= 300px) and (height <= 600px);*/
