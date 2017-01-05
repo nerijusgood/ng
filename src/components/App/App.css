@@ -1,4 +1,4 @@
-@import 'Constants.css';
+@import '../../style/Constants.css';
 
 ::selection {
   color: $colorWhite;
@@ -13,8 +13,8 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url('../assets/Fonts/freigsanprobook-webfont.woff2') format('woff2'),
-    url('../assets/Fonts/freigsanprobook-webfont.woff') format('woff');
+    url('../../assets/Fonts/freigsanprobook-webfont.woff2') format('woff2'),
+    url('../../assets/Fonts/freigsanprobook-webfont.woff') format('woff');
 }
 
 @font-face {
@@ -22,8 +22,8 @@
   font-style: normal;
   font-weight: 700;
   src:
-    url('../assets/Fonts/freigsanprobold-webfont.woff2') format('woff2'),
-    url('../assets/Fonts/freigsanprobold-webfont.woff') format('woff');
+    url('../../assets/Fonts/freigsanprobold-webfont.woff2') format('woff2'),
+    url('../../assets/Fonts/freigsanprobold-webfont.woff') format('woff');
 }
 
 /* Elements
@@ -93,6 +93,14 @@ p {
   }
 }
 
+.u-two-col {
+  & > div {
+    width: 50%;
+    flex-basis: 50%;
+    flex: 0 1 auto;
+  }
+}
+
 /*.u-twoThirds {
   width: 70% !important;
   width: calc(70% - 20px) !important;
@@ -125,23 +133,15 @@ p {
   margin-bottom: 30px;
 }
 
-.Trailer-small {
-  margin-bottom: 20px;
-}
-
 .Trail-none {
   padding-bottom: 0 !important;
-}
-
-.Leader-none {
-  margin-top: 0;
 }
 
 .Leader {
   margin-top: 30px;
 }
 
-.Leader-small {
+.Leader-sm {
   margin-top: 20px;
 }
 

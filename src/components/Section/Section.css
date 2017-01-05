@@ -1,0 +1,51 @@
+@import '../../style/Constants.css';
+
+.Section {
+
+}
+
+/* Section-title
+-------------------------------------------------------------------------------- */
+.Section-title {
+  display: flex;
+  /*border-bottom: 4px solid $colorRed;*/
+
+  h2 {
+    position: relative;
+    color: rgba($colorGray, 0.6);
+    padding-bottom: 4px;
+    text-transform: capitalize;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: calc(100% + 10px);
+      background-color: $colorRed;
+      transition: width 0.3s;
+    }
+
+    &:hover:after {
+      width: calc(100% + 20px);
+    }
+  }
+}
+
+.Section-title--right {
+  justify-content: flex-end;
+
+  h2 {
+    &:after {
+      left: initial;
+      right: 0;
+    }
+  }
+}
+
+/* Section-content
+-------------------------------------------------------------------------------- */
+
+.Section-content {
+}

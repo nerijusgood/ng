@@ -1,16 +1,16 @@
 import { h, Component } from 'preact'
-import style from './Main.css'
+import style from './App.css'
 import { Container } from '../'
 
-export default class Main extends Component {
+export default class Header extends Component {
   render({
     children,
     ...props
   }){
     return (
-      <main id='Main' class='Main'>
+      <div id='App' {...props}>
         {children}
-      </main>
+      </div>
     )
   }
 }
