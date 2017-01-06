@@ -1,10 +1,21 @@
 @import '../../style/Constants.css';
 
 .Main {
+  position: relative;
   box-sizing: border-box;
   background-color: $colorWhite;
   height: calc(100vh - ($navbarHeight + 20px));
   width: calc(100vw - 40px);
   margin: 0 auto 20px;
   padding: 65px 0;
+}
+
+.Main-note {
+  position: absolute;
+  right: 3px;
+  top: 45%;
+  transform: rotate(90deg);
+  font-weight: 700;
+  font-size: .875rem;
+  color: $colorGray;
 }

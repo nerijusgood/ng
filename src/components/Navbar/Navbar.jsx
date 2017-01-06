@@ -16,8 +16,8 @@ export default class Navbar extends Component {
           <nav class='Navbar-nav'>
             <ul>
               <li><Link href="/">Front</Link></li>
-              <li><Link href="/profile">Work</Link></li>
-              <li><Link href="/profile/john">Hire</Link></li>
+              <li><Link href="/content">Work</Link></li>
+              <li><Link href="/content">Hire</Link></li>
             </ul>
           </nav>
       </div>

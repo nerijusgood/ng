@@ -32,6 +32,7 @@ html {
   background-color: $colorBG;
   background-size: 100%, 100px auto;
   font-family: 'Freight Sans', sans-serif;
+  font-size: 16px;
   min-height: 100%;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

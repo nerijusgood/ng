@@ -1,14 +1,14 @@
 import { h, Component } from 'preact'
 import { Main, Navbar, Container, Section, Copy, Button, Card } from '../../components'
-import style from './Home.css'
+import style from './Content.css'
 
-export default class Home extends Component {
+export default class Content extends Component {
   render() {
     return (
       <Main note='_01'>
         <Container>
 
-          <div class="u-flex u-two-col">
+          <div class="u-flex">
             {/* intro */}
             <Section title="intro">
               <Copy>
@@ -17,15 +17,6 @@ export default class Home extends Component {
               </Copy>
 
               <Button>See</Button>
-            </Section>
-
-            {/* Featured */}
-            <Section title="featured" right>
-              <Card
-                title='Dynaudio'
-                subtitle='Product line website'
-                href='/'
-              />
             </Section>
           </div>
 

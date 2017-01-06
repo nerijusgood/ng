@@ -5,25 +5,24 @@
 .Button {
   position: relative;
   display: inline-block;
-  padding: 25px 120px 25px 60px;
-  margin: 15px 30px;
+  padding: 18px 100px 18px 55px;
   border: none;
   background: $colorGreen;
   cursor: pointer;
-	overflow: hidden;
+  overflow: hidden;
 
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: inherit;
-  font-weight: 700;
+  color: $colorGray;
 
   outline: none;
   transition: all 0.3s;
 
   &:hover {
-    background: #8ac3be;
+    background: rgba($colorGreen, 0.8);
 
     &:after {
       width: 40%;

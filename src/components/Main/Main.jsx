@@ -5,10 +5,12 @@ import { Container } from '../'
 export default class Main extends Component {
   render({
     children,
+    note,
     ...props
   }){
     return (
       <main id='Main' class='Main'>
+        <span class='Main-note'>{note}</span>
         {children}
       </main>
     )
