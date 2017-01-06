@@ -22,16 +22,12 @@
 }
 
 .Copy-title {
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 700;
   line-height: calc(24 / 20);
-  padding-top: 15px;
-  position: relative;
-
-  /*@media (--bpAbove) {
-    font-size: 30px;
-    line-height: calc(38 / 30);
-  }*/
+  margin-top: 20px;
+  color: $colorGray;
+  text-transform: uppercase;
 }
 
 .Copy-content > a:not(.Button) {

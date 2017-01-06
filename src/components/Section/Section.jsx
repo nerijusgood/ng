@@ -16,7 +16,7 @@ export default class Section extends Component {
           </h2>
         </div>
 
-        <div class="Section-content Leader">
+        <div class="Section-content">
           {children}
         </div>
       </div>

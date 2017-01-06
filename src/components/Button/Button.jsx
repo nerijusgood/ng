@@ -7,13 +7,13 @@ export default class Button extends Component {
 	}
 
   render(
-    { children, ...props},
+    { children, onClick, ...props},
     { stars }
   ){
     return (
-      <div class={style.Button}>
-
-      </div>
+      <button class='Button' onClick={onClick} {...props}>
+        {children}
+      </button>
     )
   }
 }
