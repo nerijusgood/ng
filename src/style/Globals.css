@@ -1,0 +1,151 @@
+@import './Constants.css';
+
+::selection {
+  color: $colorWhite;
+  background: $colorRed;
+  text-shadow: none;
+}
+
+/* Fonts
+-------------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Freight Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../../assets/Fonts/freigsanprobook-webfont.woff2') format('woff2'),
+    url('../../assets/Fonts/freigsanprobook-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Freight Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('../../assets/Fonts/freigsanprobold-webfont.woff2') format('woff2'),
+    url('../../assets/Fonts/freigsanprobold-webfont.woff') format('woff');
+}
+
+/* Elements
+-------------------------------------------------------------------------------- */
+html {
+  background-color: $colorBG;
+  background-size: 100%, 100px auto;
+  font-family: 'Freight Sans', sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  font-size: 100%;
+  line-height: calc(22 / 16);
+  margin: 0;
+  min-height: 100%;
+}
+
+a {
+  background-color: transparent;
+  color: currentColor;
+  display: inline-block;
+  outline: 0;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 100%;
+  font-weight: 700;
+  line-height: inherit;
+  margin: 0;
+}
+
+p {
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0;
+}
+
+/* Layout
+-------------------------------------------------------------------------------- */
+.u-flex {
+  display: flex;
+}
+
+.u-row {
+  display: block;
+
+  & > div {
+    vertical-align: top;
+  }
+}
+
+.u-two-col {
+  & > div {
+    width: 50%;
+    flex-basis: 50%;
+    flex: 0 1 auto;
+  }
+}
+
+/*.u-twoThirds {
+  width: 70% !important;
+  width: calc(70% - 20px) !important;
+  padding-right: 20px;
+
+  @media (--bpBelow) {
+    width: 100% !important;
+  }
+}
+
+.u-oneThird {
+  width: 30% !important;
+
+  @media (--bpBelow) {
+    width: 100% !important;
+  }
+}*/
+
+/* Typography
+-------------------------------------------------------------------------------- */
+.u-f-bold {
+  font-weight: bold;
+  font-family: 'Freight Sans', sans-serif;
+}
+
+
+/* Spacing
+-------------------------------------------------------------------------------- */
+.Trailer {
+  margin-bottom: 30px;
+}
+
+.Trail-none {
+  padding-bottom: 0 !important;
+}
+
+.Leader {
+  margin-top: 30px;
+}
+
+.Leader-sm {
+  margin-top: 20px;
+}
+
+.Lead {
+  padding-top: 30px;
+}

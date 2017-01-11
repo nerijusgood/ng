@@ -8,6 +8,12 @@
   width: calc(100vw - 40px);
   margin: 0 auto 20px;
   padding: 65px 0;
+
+  will-change: height, margin;
+  transition-property: height, margin;
+  transition-duration: .3s;
+  transition-delay: .25s;
+  transition-timing-function: ease-in-out;
 }
 
 .Main-note {
@@ -18,4 +24,10 @@
   font-weight: 700;
   font-size: .875rem;
   color: $colorGray;
+}
+
+.Main--content {
+  height: 100vh;
+  z-index: 99;
+  margin: -116px auto 0;
 }

@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import { Router } from 'preact-router'
-
-import { App, Home, Content } from './containers'
+import { Home, Hire, Content } from './containers'
+import { App, PageTransition } from './components'
 
 export default class Site extends Component {
   /** Gets fired when the route changes.
@@ -14,14 +14,37 @@ export default class Site extends Component {
 
   render() {
     return (
-      <Router onChange={this.handleRoute}>
-        {/* <Landing path='/' /> */}
+      <App class='App'>
+        <Router onChange={this.handleRoute}>
 
-        <App path='/'>
-          <Home path='/' default />
-          <Content path='content' />
-        </App>
-      </Router>
+          {/* HOME */}
+          <PageTransition
+            component={Home}
+            path='/'
+          />
+
+          {/* HIRE */}
+          <PageTransition
+            component={Hire}
+            path='/hire'
+          />
+
+          {/* CONTENT: XX  */}
+          <PageTransition
+            component={Content}
+            class='content'
+            sub
+            path='/content'
+          />
+
+          {/* 404 */}
+          <PageTransition
+            component={Home}
+            default
+          />
+
+        </Router>
+      </App>
     )
   }
 }

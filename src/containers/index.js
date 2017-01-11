@@ -1,4 +1,5 @@
-export App from './App/App'
+// export App from './App/App'
 export Home from './Home/Home'
 export Content from './Content/Content'
+export Hire from './Hire/Hire'
 // export Landing from './Landing/Landing'

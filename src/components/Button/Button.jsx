@@ -7,13 +7,19 @@ export default class Button extends Component {
 	}
 
   render(
-    { children, onClick, ...props},
+    { children, onClick, url, ...props},
     { stars }
   ){
-    return (
+    const el = url ?
+      <a href={url} class='Button' {...props}>
+        {children}
+      </a> :
       <button class='Button' onClick={onClick} {...props}>
         {children}
       </button>
+
+    return (
+      {el}
     )
   }
 }

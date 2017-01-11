@@ -1,4 +1,5 @@
 import { h, Component } from 'preact'
+import cx from 'classnames'
 import style from './Main.css'
 import { Container } from '../'
 
@@ -9,9 +10,12 @@ export default class Main extends Component {
     ...props
   }){
     return (
-      <main id='Main' class='Main'>
+      <main id='Main' class={cx('Main', {[`Main--${props.class}`]: props.class} )}>
         <span class='Main-note'>{note}</span>
-        {children}
+
+        <Container>
+          {children}
+        </Container>
       </main>
     )
   }
