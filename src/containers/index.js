@@ -2,4 +2,6 @@
 export Home from './Home/Home'
 export Content from './Content/Content'
 export Hire from './Hire/Hire'
+export Work from './Work/Work'
+export Missing404 from './404/404'
 // export Landing from './Landing/Landing'

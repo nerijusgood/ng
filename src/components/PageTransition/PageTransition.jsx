@@ -5,7 +5,7 @@ import { Main } from '../'
 import style from './PageTransition.css'
 
 export default (props) => (
-  <Main note='_01' class={props.class}>
+  <Main note={props.num} class={props.class} sub={props.sub}>
     <PreactCSSTransitionGroup
       class={cx('Trans-wrap', props.class )}
       component='div'

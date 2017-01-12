@@ -7,6 +7,7 @@ export default class Main extends Component {
   render({
     children,
     note,
+    sub,
     ...props
   }){
     return (
