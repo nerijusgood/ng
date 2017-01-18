@@ -4,26 +4,38 @@
   position: relative;
   box-sizing: border-box;
   background-color: $colorWhite;
-  height: calc(100vh - ($navbarHeight + 20px));
-  width: calc(100vw - 40px);
-  margin: 0 auto 20px;
+  width: calc(100vw - 50px);
+  margin: 0 auto 25px;
   padding: 65px 0;
+  z-index: $zSm;
 
   will-change: height, margin;
   transition-property: height, margin;
   transition-duration: .3s;
   transition-delay: .25s;
   transition-timing-function: ease-in-out;
+
+  @media (--md) {
+    height: calc(100vh - ($navbarHeight + 20px));
+    width: calc(100vw - 40px);
+    margin: 0 auto 20px;
+  }
 }
 
 .Main-note {
   position: absolute;
-  right: 3px;
-  top: 45%;
+  right: 10px;
+  top: 16px;
   transform: rotate(90deg);
   font-weight: 700;
   font-size: .875rem;
   color: $colorGray;
+
+  @media (--md) {
+    position: absolute;
+    right: 3px;
+    top: 45%;
+  }
 }
 
 .Main--content {

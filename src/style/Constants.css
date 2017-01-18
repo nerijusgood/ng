@@ -9,12 +9,18 @@ $colorGreen: #9bcbc7;
 $colorRed: #da5441;
 
 /* Heigths */
+$navbarMobile: 80px;
 $navbarHeight: 116px;
+
+/* Z-Index */
+$zSm: 1;
+$zMd: 5;
+$zLg: 99;
 
 /* Breakpoints */
 @custom-media --sm (width >= 400px);
 @custom-media --mds (width >= 600px);
-@custom-media --md (width >= 768px);
+@custom-media --md (width > 768px);
 @custom-media --lg (width >= 1024px);
 @custom-media --xl (width >= 1280px);
 

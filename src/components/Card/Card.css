@@ -9,8 +9,12 @@
 
 .Card-link {
   display: block;
-  min-height: 375px;
+  min-height: 275px;
   padding: 20px;
+
+  @media (--md) {
+    min-height: 375px;
+  }
 
   &:after,
   &:before {

@@ -84,21 +84,24 @@ p {
 -------------------------------------------------------------------------------- */
 .u-flex {
   display: flex;
-}
+  flex-direction: column;
 
-.u-row {
-  display: block;
-
-  & > div {
-    vertical-align: top;
+  @media (--md) {
+    flex-direction: row;
   }
 }
 
 .u-two-col {
   & > div {
-    width: 50%;
-    flex-basis: 50%;
+    width: 100%;
+    flex-basis: 100%;
     flex: 0 1 auto;
+
+    @media (--md) {
+      width: 50%;
+      flex-basis: 50%;
+      flex: 0 1 auto;
+    }
   }
 }
 
@@ -127,7 +130,6 @@ p {
   font-family: 'Freight Sans', sans-serif;
 }
 
-
 /* Spacing
 -------------------------------------------------------------------------------- */
 .Trailer {
@@ -148,6 +150,20 @@ p {
 
 .Lead {
   padding-top: 30px;
+}
+
+/* Hide/Show
+-------------------------------------------------------------------------------- */
+.u-visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.u-hide {
+  display: none;
 }
 
 /* Transitions

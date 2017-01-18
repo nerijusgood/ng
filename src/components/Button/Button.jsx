@@ -19,7 +19,7 @@ export default class Button extends Component {
       </button>
 
     return (
-      {el}
+      el
     )
   }
 }

@@ -20,7 +20,7 @@ export default class Home extends Component {
           <Card
             title='Dynaudio'
             subtitle='Product line website'
-            href='/'
+            href='/work/dynaudio'
           />
         </Section>
       </div>

@@ -4,8 +4,15 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: $navbarMobile;
+
+  @media (--md) {
+    height: $navbarHeight;
+  }
 }
 
+/* Navbar-logo
+-------------------------------------------------------------------------------- */
 .Navbar-logo {
   display: flex;
   align-items: center;
@@ -17,43 +24,64 @@
   }
 }
 
-.Navbar-nav {
-  ul {
+/* Navbar-List, Navbar-item
+-------------------------------------------------------------------------------- */
+.Navbar-list {
+  /*display: none;*/
+  position: absolute;
+  flex-direction: column;
+  top: $navbarMobile;
+  left: 0;
+  width: 100%;
+  height: calc(100% - $navbarMobile);
+  background-color: $colorBG;
+  z-index: $zLg;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+
+  @media (--md) {
+    z-index: $zSm;
     display: flex;
     flex-direction: row;
+    position: static;
+    height: auto;
+    width: auto;
+    transform: translateX(0);
+  }
+}
+
+.Navbar-item {
+  display: block;
+  border-bottom: 1px solid $colorLightGray;
+
+  &:first-child {
+    border-top: 1px solid $colorLightGray;
   }
 
-  li:nth-child(1) {
-    border-left: 1px solid rgba(#e2e2e2, 0.4);
+  @media (--md) {
+    border-bottom: none;
+    border-top: none;
+
+    &:nth-child(1) {
+      border-left: 1px solid rgba(#e2e2e2, 0.4);
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid rgba(#e2e2e2, 0.6);
+    }
+
+    &:nth-child(3) {
+      border-left: 1px solid rgba(#e2e2e2, 0.8);
+      border-right: 1px solid $colorLightGray;
+    }
   }
-
-  li:nth-child(2) {
-    border-left: 1px solid rgba(#e2e2e2, 0.6);
-  }
-
-  li:nth-child(3) {
-    border-left: 1px solid rgba(#e2e2e2, 0.8);
-    border-right: 1px solid $colorLightGray;
-  }
-
-  /*a {
-    padding: 50px 10px;
-    width: 140px;
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $colorGray;
-  }*/
 
   a {
     position: relative;
     display: block;
     background: none;
     padding: 50px 10px;
-    width: 140px;
+    width: 100%;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
@@ -64,6 +92,10 @@
     outline: none;
     overflow: hidden;
     transition: all 0.3s;
+
+    @media (--md) {
+      width: 140px;
+    }
 
     &:after {
       content: '';
@@ -94,4 +126,145 @@
       opacity: 1;
     }
   }
+}
+
+/* Navbar-burger
+-------------------------------------------------------------------------------- */
+.Navbar-nav {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid $colorLightGray;
+
+  @media (--md) {
+    border-right: none;
+  }
+}
+
+.Navbar-burger {
+  display: block;
+  width: 42px;
+  height: 42px;
+  padding: 0 20px;
+  animation: animationOneReverse 1s ease forwards;
+
+  @media (--md) {
+    display: none;
+  }
+
+  &:before {
+    animation: animationOneReverse 1s ease forwards;
+  }
+
+  &:after {
+    animation: animationTwoReverse 1s ease forwards;
+  }
+}
+
+.Navbar-nav input:checked + .Navbar-burger:before {
+  animation: animationOne 1s ease forwards;
+}
+
+.Navbar-nav input:checked + .Navbar-burger:after {
+  animation: animationTwo 1s ease forwards;
+}
+
+.Navbar-burger:before,
+.Navbar-burger:after,
+.Navbar-nav input:checked + .Navbar-burger:after,
+.Navbar-nav input:checked + .Navbar-burger:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: $colorRed;
+}
+
+.Navbar-burger span:first-child {
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: $colorRed;
+  }
+
+  &:before {
+    top: 6px;
+    animation: animationBurgerTopReverse 1s ease forwards;
+  }
+
+  &:after {
+    bottom: 6px;
+    animation: animationBurgerBottomReverse 1s ease forwards;
+  }
+}
+
+.Navbar-nav input:checked + .Navbar-burger span:first-child::before {
+  animation: animationBurgerTop 1s ease forwards;
+}
+
+.Navbar-nav input:checked + .Navbar-burger span:first-child::after {
+  animation: animationBurgerBottom 1s ease forwards;
+}
+
+/* Navbar-checked
+-------------------------------------------------------------------------------- */
+.Navbar-nav input:checked {
+  & ~ .Navbar-list {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes animationOneReverse {
+  0% { transform: rotate(315deg); }
+  25% { transform: rotate(360deg); }
+  50%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes animationOne {
+  0%, 50% { transform: rotate(0deg); }
+  75% { transform: rotate(360deg); }
+  100% { transform: rotate(315deg); }
+}
+
+@keyframes animationTwoReverse {
+  0% { transform: rotate(405deg); }
+  25% { transform: rotate(450deg); }
+  50%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes animationTwo {
+  0%, 50% { transform: rotate(0deg); }
+  75% { transform: rotate(450deg); }
+  100% { transform: rotate(405deg); }
+}
+
+@keyframes animationBurgerTopReverse {
+  0%, 50% { transform: translateY(12px); opacity: 0; }
+  51% { transform: translateY(12px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes animationBurgerTop {
+  0% { transform: translateY(0px); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 1; }
+  51%, 100% { transform: translateY(12px); opacity: 0; }
+}
+
+@keyframes animationBurgerBottomReverse {
+  0%, 50% { transform: translateY(-12px); opacity: 0; }
+  51% { transform: translateY(-12px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes animationBurgerBottom {
+  0% { transform: translateY(0px); opacity: 1; }
+  50% { transform: translateY(-12px); opacity: 1; }
+  51%, 100% { transform: translateY(-12px); opacity: 0; }
 }
