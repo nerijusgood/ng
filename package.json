@@ -68,7 +68,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "dynamics.js": "^1.1.5",
     "granim": "^1.0.6",
+    "imagesloaded": "^4.1.1",
+    "masonry-layout": "^4.1.1",
     "postcss-color-hexa": "^1.2.4",
     "postcss-css-variables": "^0.6.0",
     "postcss-hexrgba": "^0.2.1",

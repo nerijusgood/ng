@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import { Router } from 'preact-router'
-import { Home, Hire, Work, Content, Missing404 } from './containers'
+import { Home, Hire, Work, Content, Missing404, Guide } from './containers'
 import { App, PageTransition } from './components'
 
 export default class Site extends Component {
@@ -44,6 +44,12 @@ export default class Site extends Component {
             class='content'
             sub
             path='/work/:item'
+          />
+
+          {/* GUIDE  */}
+          <PageTransition
+            component={Guide}
+            path='/guide'
           />
 
           {/* 404 */}
