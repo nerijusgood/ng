@@ -56,17 +56,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel'
       },
+      // {
+      //   test: /\.css?$/,
+      //   exclude: /src\/components\//,
+      //   loader: ExtractTextPlugin.extract('style?singleton', [
+      //     `css?sourceMap=${CSS_MAPS}&modules&importLoaders=1&localIdentName=[local]${process.env.CSS_MODULES_IDENT || '_[hash:base64:5]'}`,
+      //     'postcss'
+      //   ].join('!'))
+      // },
       {
         test: /\.css?$/,
-        exclude: /src\/components\//,
-        loader: ExtractTextPlugin.extract('style?singleton', [
-          `css?sourceMap=${CSS_MAPS}&modules&importLoaders=1&localIdentName=[local]${process.env.CSS_MODULES_IDENT || '_[hash:base64:5]'}`,
-          'postcss'
-        ].join('!'))
-      },
-      {
-        test: /\.css?$/,
-        include: /src\/components\//,
+        include: /src/,
         loader: ExtractTextPlugin.extract('style?singleton', [
           `css?sourceMap=${CSS_MAPS}`,
           'postcss'
