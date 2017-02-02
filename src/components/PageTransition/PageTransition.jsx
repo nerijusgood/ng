@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import cx from 'classnames'
 import PreactCSSTransitionGroup from 'preact-css-transition-group'
-import { Main } from '../'
+import { Main } from 'components'
 import style from './PageTransition.css'
 
 export default (props) => (

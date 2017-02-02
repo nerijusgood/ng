@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import { Main, Navbar, Container, Section, Copy, Button, Card } from '../../components'
+import { Main, Navbar, Container, Section, Copy, Button, Card } from 'components'
 import style from './Content.css'
 
 export default class Content extends Component {

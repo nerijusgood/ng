@@ -28,13 +28,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.css'],
     modulesDirectories: [
-      path.resolve(__dirname, "src/lib"),
+      path.resolve(__dirname, "./src"),
       path.resolve(__dirname, "node_modules"),
       'node_modules'
     ],
     alias: {
-      components: path.resolve(__dirname, "src/components"), // used for tests
+      components: path.resolve(__dirname, "src/components"),
       containers: path.resolve(__dirname, "src/containers"),
+      lib: path.resolve(__dirname, "src/lib"),
       style: path.resolve(__dirname, "src/style"),
       'react': 'preact-compat',
       'react-dom': 'preact-compat'

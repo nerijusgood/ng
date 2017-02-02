@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import { Section } from '../../components'
+import { Section } from 'components'
 
 export default class Missing404 extends Component {
   render() {
