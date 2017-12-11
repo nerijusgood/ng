@@ -65,7 +65,7 @@ module.exports = {
       //   ].join('!'))
       // },
       {
-        test: /\.css?$/,
+        test: /\.css$/,
         include: /src/,
         loader: ExtractTextPlugin.extract('style?singleton', [
           `css?sourceMap=${CSS_MAPS}`,
