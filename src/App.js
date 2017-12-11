@@ -14,53 +14,60 @@ export default class Site extends Component {
 
   render() {
     return (
-      <App class='App'>
+      // <App class='App'>
         <Router onChange={this.handleRoute}>
+          <Landing path='/' />
+          {/* LandingTEmp */}
+          {/* <PageTransition
+            num='01'
+            component={Landing}
+            path='/'
+          /> */}
 
           {/* HOME */}
-          <PageTransition
+          {/* <PageTransition
             num='01'
             component={Home}
             path='/'
-          />
+          /> */}
 
           {/* Work */}
-          <PageTransition
+          {/* <PageTransition
             num='02'
             component={Work}
             path='/work'
-          />
+          /> */}
 
           {/* HIRE */}
-          <PageTransition
+          {/* <PageTransition
             num='03'
             component={Hire}
             path='/hire'
-          />
+          /> */}
 
           {/* CONTENT: XX  */}
-          <PageTransition
+          {/* <PageTransition
             component={Content}
             class='content'
             sub
             path='/work/:item'
-          />
+          /> */}
 
           {/* GUIDE  */}
-          <PageTransition
+          {/* <PageTransition
             component={Guide}
             path='/guide'
-          />
+          /> */}
 
           {/* 404 */}
-          <PageTransition
+          {/* <PageTransition
             num='00'
             component={Missing404}
             default
-          />
+          /> */}
 
         </Router>
-      </App>
+      // </App>
     )
   }
 }

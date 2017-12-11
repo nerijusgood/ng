@@ -17,9 +17,9 @@ export default class App extends Component {
 
     return (
       <div id='App' {...props}>
-        <Container>
+        {/* <Container>
           <Navbar />
-        </Container>
+        </Container> */}
         {children}
       </div>
     )

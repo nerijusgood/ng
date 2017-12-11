@@ -1,8 +1,18 @@
-.Canvas {
-  height: 10vh;
-  width: 10vw;
+.Canvas-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  h1 {
+    position: absolute;
+    color: white;
+  }
 }
 
-.Landing {
-
+.Canvas {
+  height: 100vh;
+  width: 100vw;
 }

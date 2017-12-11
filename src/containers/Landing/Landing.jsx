@@ -18,9 +18,8 @@ export default class Landing extends Component {
       states: {
         'default-state': {
           gradients: [
-            ['#AA076B', '#61045F'],
-            ['#02AAB0', '#00CDAC'],
-            ['#DA22FF', '#9733EE']
+            ['#202326', '#211d20'],
+            ['#302A2E', '#131012']
           ]
         }
       }
@@ -29,12 +28,11 @@ export default class Landing extends Component {
 
   render() {
     return (
-      <div class={style.Landing}>
-        <canvas id='canvas-basic' className={style.Canvas}>
+      <div class="Canvas-wrap">
+        <canvas id='canvas-basic' class="Canvas">
           {/* <FormattedMessage {...messages.header} /> */}
-
-          <h1>Hello</h1>
         </canvas>
+        <h1>Nerijus Gudas</h1>
       </div>
     )
   }
