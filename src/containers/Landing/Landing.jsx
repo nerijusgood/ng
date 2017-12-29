@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import Granim from 'granim'
 import style from './Landing.css'
+import { Icon } from 'components'
 
 export default class Landing extends Component {
 
@@ -10,7 +11,7 @@ export default class Landing extends Component {
 
   handleBgEffects() {
     this.granimInstance = new Granim({
-      element: '#canvas-basic',
+      element: '#magic-bg',
       name: 'basic-gradient',
       direction: 'left-right',
       opacity: [1, 1],
@@ -28,11 +29,22 @@ export default class Landing extends Component {
 
   render() {
     return (
-      <div class="Canvas-wrap">
-        <canvas id='canvas-basic' class="Canvas">
+      <div class="Canvas">
+        <canvas id="magic-bg" class="Canvas-bg">
           {/* <FormattedMessage {...messages.header} /> */}
         </canvas>
-        <h1>Nerijus Gudas</h1>
+        <div class="Canvas-content">
+
+          <div class="Canvas-content-central">
+            <span>Hello</span>
+            <p>I am Nerijus Gudas, a Front-end Developer located in Copenhagen.</p>
+          </div>
+
+          <div class="Canvas-content-footer">
+            <p>Coming soon</p>
+            <Icon name="social-twitter" />
+          </div>
+        </div>
       </div>
     )
   }

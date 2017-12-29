@@ -1,18 +1,37 @@
-.Canvas-wrap {
+.Canvas {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-
-  h1 {
-    position: absolute;
-    color: white;
-  }
 }
 
-.Canvas {
+.Canvas-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Canvas-content-central {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  color: white;
+}
+
+.Canvas-content-central span {
+  font-size: 58px;
+  font-weight: 600;
+}
+
+.Canvas-bg {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+}
+
+html {
+  background: #202326;
 }

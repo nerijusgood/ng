@@ -7,6 +7,7 @@ export Copy from './Copy/Copy'
 export Button from './Button/Button'
 export Card from './Card/Card'
 export PageTransition from './PageTransition/PageTransition'
+export Icon from './Icon/Icon'
 
 // export Icon from './Icon/Icon'
 // export Button from './Button/Button'
