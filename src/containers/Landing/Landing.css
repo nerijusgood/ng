@@ -35,3 +35,10 @@
 html {
   background: #202326;
 }
+
+.Canvas-cotent-social {
+  position: absolute;
+  right: 15%;
+  top: 140px;
+  color: white;
+}

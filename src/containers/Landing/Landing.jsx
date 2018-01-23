@@ -42,6 +42,9 @@ export default class Landing extends Component {
 
           <div class="Canvas-content-footer">
             <p>Coming soon</p>
+          </div>
+
+          <div class="Canvas-cotent-social">
             <Icon name="social-twitter" />
           </div>
         </div>
