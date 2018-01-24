@@ -4,108 +4,48 @@
 -------------------------------------------------------------------------------- */
 .Card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 500px;
+  max-width: 340px;
+  padding: 3em 4em;
+  border-radius: 6px;
+  background-color: $colorDark1;
+  box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.75);
   overflow: hidden;
 }
 
-.Card-link {
-  display: block;
-  min-height: 275px;
-  padding: 20px;
-
-  @media (--md) {
-    min-height: 375px;
-  }
-
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &:before {
-    width: calc(100% - 56px);
-    height: calc(100% - 56px);
-    background-color: rgba($colorLightGray, 0.4);
-    z-index: 1;
-    transition-duration: 0.3s;
-    transition-property: left, top;
-    transition-timing-function: ease-out;
-  }
-
-  &:after {
-    width: calc(100% - 56px);
-    height: calc(100% - 56px);
-    margin: 20px;
-    border: 8px solid $colorWhite;
-    z-index: 2;
-    transition: transform 0.3s;
-  }
-
-  &:hover {
-    &:before {
-      left: 28px;
-      top: 28px;
-    }
-
-    &:after {
-      transform: rotate(15deg) scale(1.1,1.1);
-    }
-
-    .Card-content {
-      padding-left: 56px;
-      padding-bottom: 56px;
-    }
-
-    .Card-title {
-      font-size: 2rem;
-    }
-
-    .Card-subtitle {
-      font-size: 1.6rem;
-    }
-  }
-}
-
-.Card-image {
+.Card-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   height: 100%;
+  width: 100%;
+  z-index: 1;
+}
 
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+.Card-content ,
+.Card-children {
+  z-index: 1;
 }
 
 .Card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 28px;
-  transition: padding 0.3s ease-out;
+  margin-bottom: auto;
 }
 
 .Card-title,
 .Card-subtitle {
-  display: inline-block;
   color: $colorWhite;
-  background-color: rgba($colorBlack, 0.4);
-  padding: 0.2em 0.5em;
-  transition: font-size 0.3s ease-out;
+  font-weight: 400;
 }
 
 .Card-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  font-size: 2.75rem;
+  font-weight: 400;
+  // letter-spacing: 0px;
 }
 
 .Card-subtitle {

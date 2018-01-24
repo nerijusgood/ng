@@ -20,10 +20,29 @@
 @font-face {
   font-family: 'Freight Sans';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   src:
     url('../../assets/Fonts/freigsanprobold-webfont.woff2') format('woff2'),
     url('../../assets/Fonts/freigsanprobold-webfont.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Noway';
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    url('../../assets/fonts/Noway/noway-regular-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/Noway/noway-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noway';
+  font-style: normal;
+  font-weight: 500;
+  src: 
+    url('../../assets/fonts/Noway/noway-medium-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/Noway/noway-medium-webfont.woff') format('woff');
 }
 
 /* Elements
@@ -31,7 +50,7 @@
 html {
   background-color: $colorBG;
   background-size: 100%, 100px auto;
-  font-family: 'Freight Sans', sans-serif;
+  font-family: 'Noway', sans-serif;
   font-size: 16px;
   min-height: 100%;
   text-size-adjust: 100%;
@@ -78,172 +97,4 @@ p {
   font-size: 100%;
   line-height: inherit;
   margin: 0;
-}
-
-/* Layout
--------------------------------------------------------------------------------- */
-.u-flex {
-  display: flex;
-  flex-direction: column;
-
-  @media (--md) {
-    flex-direction: row;
-  }
-}
-
-.u-two-col {
-  & > div {
-    width: 100%;
-    flex-basis: 100%;
-    flex: 0 1 auto;
-
-    @media (--md) {
-      width: 50%;
-      flex-basis: 50%;
-      flex: 0 1 auto;
-    }
-  }
-}
-
-/*.u-twoThirds {
-  width: 70% !important;
-  width: calc(70% - 20px) !important;
-  padding-right: 20px;
-
-  @media (--bpBelow) {
-    width: 100% !important;
-  }
-}
-
-.u-oneThird {
-  width: 30% !important;
-
-  @media (--bpBelow) {
-    width: 100% !important;
-  }
-}*/
-
-/* Typography
--------------------------------------------------------------------------------- */
-.u-f-bold {
-  font-weight: bold;
-  font-family: 'Freight Sans', sans-serif;
-}
-
-/* Spacing
--------------------------------------------------------------------------------- */
-.Trailer {
-  margin-bottom: 30px;
-}
-
-.Trail-none {
-  padding-bottom: 0 !important;
-}
-
-.Leader {
-  margin-top: 30px;
-}
-
-.Leader-sm {
-  margin-top: 20px;
-}
-
-.Lead {
-  padding-top: 30px;
-}
-
-/* Hide/Show
--------------------------------------------------------------------------------- */
-.u-visuallyHidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
-}
-
-.u-hide {
-  display: none;
-}
-
-/* Transitions
--------------------------------------------------------------------------------- */
-.Trans-wrap {
-  position: relative;
-  transform-style: preserve-3d;
-  overflow: visible;
-
-  > * {
-    will-change: opacity, transform;
-  }
-}
-
-/* Main page */
-.Page-enter {
-  position: relative;
-  opacity: 0;
-}
-
-.Page-enter-active {
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: .4s;
-  transition-delay: .3s;
-  transition-timing-function: ease-in-out;
-  transform: translate(0, 0);
-}
-
-.Page-leave {
-  position: absolute !important;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  pointer-events: none;
-  transition-property: opacity;
-  transition-duration: .4s;
-  transition-timing-function: ease-in-out;
-  z-index: 99;
-}
-
-.Page-leave-active {
-  position: absolute;
-  opacity: 0;
-}
-
-
-/* Sub */
-.Sub-enter {
-  opacity: 0;
-  position: relative;
-  transform: translate(40px, 0);
-  z-index: 1;
-}
-
-.Sub-enter-active {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition-property: opacity, transform;
-  transition-duration: .6s;
-  transition-delay: .6s;
-  transition-timing-function: cubic-bezier(.6, 0, .4, 1);
-}
-
-.Sub-leave {
-  position: absolute !important;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  transform: translate(0, 0);
-  pointer-events: none;
-  transition-property: opacity;
-  transition-duration: .25s;
-  transition-timing-function: ease-in-out;
-  z-index: 99;
-}
-
-.Sub-leave-active {
-  position: absolute;
-  opacity: 0;
 }

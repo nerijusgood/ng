@@ -1,8 +1,1 @@
-// export App from './App/App'
-export Home from './Home/Home'
-export Content from './Content/Content'
-export Hire from './Hire/Hire'
-export Work from './Work/Work'
-export Missing404 from './404/404'
-export Guide from './Guide/Guide'
 export Landing from './Landing/Landing'

@@ -1,12 +1,15 @@
 $colorWhite: #fff;
 $colorBlack: #000;
-$colorBG: #f7f7f7;
 
-$colorGray: #333333;
-$colorGrayDark: #7c7c7c;
-$colorLightGray: #e2e2e2;
-$colorGreen: #9bcbc7;
-$colorRed: #da5441;
+$colorBG: #faf9f9;
+$colorDark1: #252528;
+$colorDark2: #363740;
+$colorHeader: #4e4f56;
+$colorText: #b7b7b7;
+$colorAction: #ff4539;
+
+$fontPri: 'Noway', sans-serif;
+$fontAlt: 'Freight Sans', sans-serif;
 
 /* Heigths */
 $navbarMobile: 80px;

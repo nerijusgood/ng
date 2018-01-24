@@ -1,51 +1,25 @@
 import { h, Component } from 'preact'
-import Granim from 'granim'
 import style from './Landing.css'
-import { Icon } from 'components'
+import { Card, Button } from 'components'
 
 export default class Landing extends Component {
-
-  componentDidMount() {
-    this.handleBgEffects()
-  }
-
-  handleBgEffects() {
-    this.granimInstance = new Granim({
-      element: '#magic-bg',
-      name: 'basic-gradient',
-      direction: 'left-right',
-      opacity: [1, 1],
-      isPausedWhenNotInView: true,
-      states: {
-        'default-state': {
-          gradients: [
-            ['#202326', '#211d20'],
-            ['#302A2E', '#131012']
-          ]
-        }
-      }
-    })
-  }
-
   render() {
     return (
-      <div class="Canvas">
-        <canvas id="magic-bg" class="Canvas-bg">
-          {/* <FormattedMessage {...messages.header} /> */}
-        </canvas>
-        <div class="Canvas-content">
+      <div class="Landing">
 
-          <div class="Canvas-content-central">
-            <span>Hello</span>
-            <p>I am Nerijus Gudas, a Front-end Developer located in Copenhagen.</p>
+        <Card title="Got a killer project?">
+          <Button url="mailto:nerijusgood@gmail.com">Get in touch</Button>
+        </Card>
+        
+        <div class="Landing-content">
+
+          <div class="Landing-intro">
+            <h1>Hello,</h1>
+            <p>I am Nerijus Gudas. I am a <span>Front-End Developer</span> living in <span>Copenhagen</span>, where
+             I work as Digital Technologist at a strategic design firm <span>Designit</span>.</p>
           </div>
 
-          <div class="Canvas-content-footer">
-            <p>Coming soon</p>
-          </div>
-
-          <div class="Canvas-cotent-social">
-            <Icon name="social-twitter" />
+          <div class="Landing-social">
           </div>
         </div>
       </div>

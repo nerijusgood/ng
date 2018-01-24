@@ -1,42 +1,47 @@
-.Canvas {
+@import '../../style/Constants.css';
+
+/* Landing
+-------------------------------------------------------------------------------- */
+.Landing {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.Canvas-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.Landing-content {
+  max-width: 450px;
+  margin-left: auto;
 }
 
-.Canvas-content-central {
-  position: absolute;
-  top: 30%;
-  left: 20%;
+.Landing-intro {
+  // top: 30%;
   color: white;
+
+  h1 {
+    color: $colorHeader;
+    font-weight: 400;
+    font-size: 4.2rem;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 400;
+    color: $colorText;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p span {
+    color: $colorAction;
+    // font-size: 16px;
+    letter-spacing: 0.4px;
+  }
 }
 
-.Canvas-content-central span {
-  font-size: 58px;
-  font-weight: 600;
-}
-
-.Canvas-bg {
-  height: 100vh;
-  width: 100%;
-}
-
-html {
-  background: #202326;
-}
-
-.Canvas-cotent-social {
+.Landing-social {
   position: absolute;
   right: 15%;
   top: 140px;

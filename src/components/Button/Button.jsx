@@ -3,8 +3,8 @@ import style from './Button.css'
 
 export default class Button extends Component {
   state = {
-		stars: '1' || ''
-	}
+    stars: '1' || ''
+  }
 
   render(
     { children, onClick, url, ...props},

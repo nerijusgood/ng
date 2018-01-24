@@ -1,30 +1,50 @@
 import { h, Component } from 'preact'
+import Granim from 'granim'
 import style from './Card.css'
-import img from './img.png';
 
 export default class Card extends Component {
+  componentDidMount() {
+    this.handleBgEffects()
+  }
+
+  handleBgEffects() {
+    this.granimInstance = new Granim({
+      element: '#magic-bg',
+      name: 'basic-gradient',
+      direction: 'left-right',
+      opacity: [1, 1],
+      isPausedWhenNotInView: true,
+      states: {
+        'default-state': {
+          gradients: [
+            ['#202326', '#211d20'],
+            ['#302A2E', '#131012']
+          ]
+        }
+      }
+    })
+  }
+
   render({
     children,
     title,
     subtitle,
-    href,
     ...props
   }){
-    const style = `background-image: url(${img})`
     return (
       <div class='Card'>
-        <a href={href} class='Card-link'>
-          <span class='Card-image' style={style}></span>
-
-          <div class='Card-content'>
-            <span class='Card-title'>
-              {title}
-            </span>
-            <span class='Card-subtitle'>
-              {subtitle}
-            </span>
-          </div>
-        </a>
+        <canvas id="magic-bg" class="Card-bg"></canvas>
+        <div class='Card-content'>
+          <h2 class='Card-title'>
+            {title}
+          </h2>
+          <span class='Card-subtitle'>
+            {subtitle}
+          </span>
+        </div>
+        <div class='Card-children'>
+          {children}
+        </div>
       </div>
     )
   }
