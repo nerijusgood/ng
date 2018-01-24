@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import Granim from 'granim'
 import style from './Card.css'
+import TwitterIcon from './../../assets/Svg/social/github.svg'
 
 export default class Card extends Component {
   componentDidMount() {

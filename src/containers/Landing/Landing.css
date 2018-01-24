@@ -7,12 +7,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  max-width: 1024px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .Landing-content {
-  max-width: 450px;
+  max-width: 400px;
   margin-left: auto;
 }
 
@@ -42,8 +42,22 @@
 }
 
 .Landing-social {
-  position: absolute;
-  right: 15%;
-  top: 140px;
-  color: white;
+  margin-top: 40px;
+  text-align: right;
+  padding-right: 30px; 
+
+  a {
+    padding-left: 18px;
+    display: inline-block;
+    color: $colorDark1;
+
+    &:hover {
+      color: $colorDark2;
+    }
+  }
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }

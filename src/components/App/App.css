@@ -1,8 +1,8 @@
 @import '../../style/Constants.css';
 
 ::selection {
-  color: $colorWhite;
-  background: $colorRed;
+  color: $colorAction;
+  background: $colorDark2;
   text-shadow: none;
 }
 
