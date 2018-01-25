@@ -18,8 +18,8 @@ export default class Card extends Component {
       states: {
         'default-state': {
           gradients: [
-            ['#202326', '#211d20'],
-            ['#302A2E', '#131012']
+            ['#252528', '#363740'],
+            ['#4e4f56', '#363740']
           ]
         }
       }

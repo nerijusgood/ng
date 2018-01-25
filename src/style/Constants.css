@@ -1,7 +1,7 @@
 $colorWhite: #fff;
 $colorBlack: #000;
 
-$colorBG: #faf9f9;
+$colorBG: #efefef;
 $colorDark1: #252528;
 $colorDark2: #363740;
 $colorHeader: #4e4f56;
@@ -21,11 +21,59 @@ $zMd: 5;
 $zLg: 99;
 
 /* Breakpoints */
-@custom-media --sm (width >= 400px);
+/* @custom-media --sm (width >= 400px); 
 @custom-media --mds (width >= 600px);
 @custom-media --md (width > 768px);
 @custom-media --lg (width >= 1024px);
-@custom-media --xl (width >= 1280px);
+@custom-media --xl (width >= 1280px);*/
 
 /*@custom-media --md (width >= 20em) and (width <= 50em);*/
 /*@custom-media --bar (height >= 300px) and (height <= 600px);*/
+
+
+
+/* Animations
+-------------------------------------------------------------------------------- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -35px, 0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  74% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+}

@@ -1,9 +1,32 @@
 @import '../../style/Constants.css';
 
+$delayGreeting: 0.4s;
+$delayBG: 4.9s;
+$delayIntro: 5.3s;
+$delaySocial: 6.1s;
+$delayCard: 7s;
+
 /* Landing
 -------------------------------------------------------------------------------- */
-.Landing {
+.Landing-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  // width: 100vw;
+  margin: auto;
+  // height: 100%;
+  background-color: $colorBG;
+  animation-delay: $delayBG;
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.Landing-wrap { 
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -11,19 +34,46 @@
   margin: 0 auto;
 }
 
+@media all and (max-width: 650px) {
+  .Landing-wrap {
+    flex-direction: column;
+    padding-bottom: 5rem;
+  }
+}
+
+.Landing-greeting {
+  position: absolute;
+  top: calc(50% - 46px);
+  left: calc(50% - 72px);
+  color: $colorHeader;
+  font-weight: 400;
+  font-size: 4.2rem;
+  animation-delay: $delayGreeting;
+  animation-duration: 4.5s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+}
+
 .Landing-content {
   max-width: 400px;
   margin-left: auto;
 }
 
+@media all and (max-width: 650px) {
+  .Landing-content {
+    padding: 10rem 1.25rem 2rem;
+    margin: 0 auto;
+  }
+}
+
 .Landing-intro {
-  // top: 30%;
   color: white;
+  animation-delay: $delayIntro;
 
   h1 {
     color: $colorHeader;
     font-weight: 400;
-    font-size: 4.2rem;
+    font-size: 2.8rem;
   }
 
   p {
@@ -32,6 +82,7 @@
     color: $colorText;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    animation-delay: $delayText;
   }
 
   p span {
@@ -45,6 +96,7 @@
   margin-top: 40px;
   text-align: right;
   padding-right: 30px; 
+  animation-delay: $delaySocial;
 
   a {
     padding-left: 18px;
@@ -60,4 +112,14 @@
     width: 24px;
     height: 24px;
   }
+}
+
+.Landing-hire {
+  animation-delay: $delayCard;
+}
+
+.Animate {
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
 }

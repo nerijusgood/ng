@@ -16,6 +16,12 @@
   overflow: hidden;
 }
 
+@media all and (max-width: 650px) {
+  .Card {
+    min-height: 400px;
+  }
+}
+
 .Card-bg {
   position: absolute;
   top: 0;
