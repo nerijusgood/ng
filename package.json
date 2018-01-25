@@ -11,7 +11,8 @@
     "test": "npm run -s lint && npm run -s test:karma",
     "test:karma": "karma start test/karma.conf.js --single-run",
     "lint": "eslint {src,test}",
-    "validate-wp:dev": "webpack-validator webpack.config.babel.js --env.dev"
+    "validate-wp:dev": "webpack-validator webpack.config.babel.js --env.dev",
+    "deploy": "surge build/ negu.surge.sh"
   },
   "keywords": [
     "preact",
